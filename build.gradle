@@ -1,7 +1,9 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
+mainClassName = 'App'
 group 'com.memesnet'
 version '1.0-SNAPSHOT'
 
