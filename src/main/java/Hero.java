@@ -8,12 +8,12 @@ public class Hero{
     public static int number;
 
     public Hero(String name,Integer age, String power, String weakness, Integer defense, Integer distanceAttack){
-        name = this.mName;
-        age = this.mAge;
-        power = this.mPower;
-        weakness = this.mWeakness;
-        defense = this.mDefense;
-        distanceAttack = this.mDistanceAttack;
+        this.mName = name;
+        this.mAge = age;
+        this.mPower = power;
+        this.mWeakness = weakness;
+        this.mDefense = defense;
+        this.mDistanceAttack = distanceAttack;
         getTotal();
     }
     public static int getTotal(){
