@@ -7,4 +7,5 @@ public class HeroTest {
     public void hero_returnsInstancObject_Object(){
         assertEquals(true, superman instanceof Object);
     }
+    
 }
