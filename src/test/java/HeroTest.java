@@ -21,10 +21,9 @@ public class HeroTest {
     public void hero_checkWhetherHeroHasPower_string(){
         assertEquals("lazereye", superman.getPower());
     }
-
     @Test
-    public void hero_checkWhetherHeroHasAge_int(){
-        Object age = 105;
+    public void hero_checkWhetherHeroHasAge_Integer(){
+        Integer age = 105;
         assertEquals(age, superman.getAge());
     }
 }
