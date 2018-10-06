@@ -13,9 +13,18 @@ public class HeroTest {
     }
 
     @Test
-    public void hero_checkWhetherHeroHasName_Object(){
-        Hero superman = new Hero("superman", 105, "lazereye", "ladies",8, 9);
+    public void hero_checkWhetherHeroHasName_String(){
         assertEquals("superman", superman.getName());
     }
-    
+
+    @Test
+    public void hero_checkWhetherHeroHasPower_string(){
+        assertEquals("lazereye", superman.getPower());
+    }
+
+    @Test
+    public void hero_checkWhetherHeroHasAge_int(){
+        Object age = 105;
+        assertEquals(age, superman.getAge());
+    }
 }
