@@ -14,4 +14,5 @@ public class Squad {
             squadall.add(newHero);
         }
     }
+    
 }

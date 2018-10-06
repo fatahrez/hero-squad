@@ -1,7 +1,4 @@
 import static  org.junit.Assert.*;
-
-import java.util.jar.Attributes.Name;
-
 import org.junit.Test;
 
 public class HeroTest {
