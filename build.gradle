@@ -1,8 +1,11 @@
-plugins {
-    id 'java'
-    id 'application'
-}
+// plugins {
+//     id 'java'
+//     id 'application'
+// }
+apply plugin: 'java'
+apply plugin: 'application'
 
+archivesBaseName = "Hero-Squad"
 mainClassName = 'App'
 group 'com.memesnet'
 version '1.0-SNAPSHOT'
