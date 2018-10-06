@@ -1,0 +1,30 @@
+{
+    "run": {
+        "default": "",
+        "items": [
+            {
+                "name": "Hero-squad",
+                "projectName": "Hero-squad",
+                "workingDirectory": "/home/abdulfatah/Documents/core/java/week4/Hero-squad",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    },
+    "debug": {
+        "default": "",
+        "items": [
+            {
+                "name": "Hero-squad",
+                "projectName": "Hero-squad",
+                "workingDirectory": "/home/abdulfatah/Documents/core/java/week4/Hero-squad",
+                "args": [],
+                "vmargs": [],
+                "env": {},
+                "preLaunchTask": ""
+            }
+        ]
+    }
+}

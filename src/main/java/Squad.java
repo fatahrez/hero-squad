@@ -1,13 +1,13 @@
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Squad {
-    private List<Object> newHero = new ArrayList<Object>();
+    List<Object> squadall=null;
     public Squad(){
-
+         squadall= new ArrayList <Object>();
     }
-    public  void addToSquad(Hero hero){
-
-        newHero.add(hero);
+    public void addToSquad(Hero newHero){
+        squadall.add(newHero);
     }
 }
