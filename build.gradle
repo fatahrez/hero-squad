@@ -16,5 +16,5 @@ repositories {
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
     compile group: 'com.sparkjava', name:'spark-core', version: '2.3'
-    compile 'com.sparkjava:spark-template-velocity:2'
+    compile 'com.sparkjava:spark-template-velocity:2.5.5'
 }
