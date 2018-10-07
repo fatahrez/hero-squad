@@ -10,6 +10,11 @@ public class HeroTest {
     }
 
     @Test
+    public void hero_supermanReturnsInstanceOfHero_Object(){
+        assertEquals(true, superman instanceof Hero);
+    }
+
+    @Test
     public void hero_checkWhetherHeroHasName_String(){
         assertEquals("superman", superman.getName());
     }
