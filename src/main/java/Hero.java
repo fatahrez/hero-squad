@@ -1,3 +1,4 @@
+import java.util.List;
 public class Hero{
     private String mName;
     private Integer mAge;
@@ -5,7 +6,8 @@ public class Hero{
     private String mWeakness;
     private Integer mDefense;
     private Integer mDistanceAttack;
-    public static int number;
+    public static List<Hero> instances;
+    private int mId;
 
     public Hero(String name,Integer age, String power, String weakness, Integer defense, Integer distanceAttack){
         this.mName = name;
@@ -14,12 +16,19 @@ public class Hero{
         this.mWeakness = weakness;
         this.mDefense = defense;
         this.mDistanceAttack = distanceAttack;
-        getTotal();
+        instances.add(this);
+        this.mId= instances.size();
     }
-    public static int getTotal(){
-        return number;
+    public static List<Hero> all(){
+        return instances;
     }
 
+    public int getId(){
+        return mId;
+    }
+    public static Hero find(int id){
+        return instances.get(id -1);
+    }
     public String getName(){
         return mName;
     }
