@@ -14,39 +14,44 @@ public class App {
             return modelAndView (model, layout);
         }, new VelocityTemplateEngine());
 
-        get("hero/new", (request, response)->{
+        get("heroes/new", (request, response)->{
             Map<String, Object> model = new HashMap<String, Object>();
-            // String name = request.queryParams("name");
-            // int age = Integer.parseInt(request.queryParams("age"));
-            // String power = request.queryParams("power");
-            // String weakness = request.queryParams("weakness");
-            // int  defense = Integer.parseInt(request.queryParams("defense"));
-            // int  distanceAttack = Integer.parseInt(request.queryParams("distanceAttack"));
-
-            // Hero myHero = new Hero(name, age, power, weakness, defense, distanceAttack);
-            // model.put("myHero", myHero);
-
             model.put("template", "templates/hero-form.vtl");
             return modelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        get("/hero", (request, response)->{
+        get("/heroes", (request, response)->{
             Map<String, Object> model = new HashMap<String, Object>();
             model.put("myHero", Hero.all());
         
-            model.put("template", "templates/hero.vtl");
+            model.put("template", "templates/heroes.vtl");
             return modelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
-        get("/hero/:age", (request, response) -> {
+        // get("/heroes", (request, response)->{
+        //     Map<String, Object> model = new HashMap<String, Object>();
+
+        //     String name = request.queryParams("name");
+        //     int age = Integer.parseInt(request.queryParams("age"));
+        //     String power = request.queryParams("power");
+        //     String weakness = request.queryParams("weakness");
+        //     int  defense = Integer.parseInt(request.queryParams("defense"));
+        //     int  distanceAttack = Integer.parseInt(request.queryParams("distanceAttack"));
+        //     Hero newHero = new Hero(name, age, power, weakness, defense, distanceAttack);
+
+        //     model.put("template", "templates/heroes.vtl");
+        //     return modelAndView(model, layout);
+        // }, new VelocityTemplateEngine());
+
+        get("/heroes/:id", (request, response) -> {
             HashMap<String, Object> model = new HashMap<String, Object>();
-            Hero hero = Hero.find(Integer.parseInt(request.params(":age")));
+            Hero hero = Hero.find(Integer.parseInt(request.params(":id")));
             model.put("hero", hero);
             model.put("template", "templates/hero.vtl");
             return new ModelAndView(model, layout);
           }, new VelocityTemplateEngine());
 
-        post("/hero", (request, response)->{
+        post("/heroes", (request, response)->{
             Map<String, Object> model = new HashMap<String, Object>();
 
             String name = request.queryParams("name");
@@ -55,13 +60,63 @@ public class App {
             String weakness = request.queryParams("weakness");
             int  defense = Integer.parseInt(request.queryParams("defense"));
             int  distanceAttack = Integer.parseInt(request.queryParams("distanceAttack"));
+            Hero newHero = new Hero(name, age, power, weakness, defense, distanceAttack);
+
             model.put("template", "templates/success.vtl");
-
-            Hero myHero = new Hero(name, age, power, weakness, defense, distanceAttack);
-            model.put("myHero", myHero);
-
             return modelAndView(model, layout);
         }, new VelocityTemplateEngine());
 
+        // get("/herosquads/new", (request, response)->{
+        //     Map<String, Object> model = new HashMap<String, Object>();
+        //     model.put("template", "templates/herosquad-form.vtl");
+        //     return new ModelAndView(model, layout);
+        // }, new VelocityTemplateEngine());
+
+        // post("/herosquads", (request, response)->{
+        //     Map <String, Object> model = new HashMap<String, Object>();
+        //     // String name = request.queryParams("name");
+        //     // String heroismCause = request.queryParams("heroismCause");
+        //     // Squad newSquad = new Squad(name, heroismCause);
+
+        //     return new ModelAndView(model, layout);
+        // }, new VelocityTemplateEngine());
+        // get("/herosquads", (request, response)->{
+        //     Map<String, Object> model = new HashMap<String, Object>();
+        //     model.put("herosquads", Squad.all());
+        //     model.put("template", "templates/herosquad.vtl");
+        //     return new ModelAndView(model, layout);
+        // },new VelocityTemplateEngine());
+        // get("/herosquads/:id", (request, response)->{
+        //     Map<String, Object> model = new HashMap<String, Object>();
+        //     model.put("herosquads", Squad.all());
+        //     model.put("heroes", Hero.all());
+        //     model.put("template", "templates/herosquad.vtl");
+        //     return new ModelAndView(model, layout);
+        // },new VelocityTemplateEngine());
+        // get("/herosquads/:id/heroes/new", (request, response)->{
+        //     Map<String, Object> model = new HashMap<String, Object>();
+        //     Squad squad = Squad.find(Integer.parseInt(":id"));
+        //     model.put("squad", squad);
+        //     model.put("template", "templates/herosquad-form.vtl");
+        //     return new ModelAndView(model, layout);
+        // },new VelocityTemplateEngine());
+        // get("/heroes", (request, response)->{
+        //     Map<String, Object> model = new HashMap<String, Object>();
+        //     Squad squad = Squad.find(Integer.parseInt("squadId"));
+
+        //     String name = request.queryParams("name");
+        //     int age = Integer.parseInt(request.queryParams("age"));
+        //     String power = request.queryParams("power");
+        //     String weakness = request.queryParams("weakness");
+        //     int  defense = Integer.parseInt(request.queryParams("defense"));
+        //     int  distanceAttack = Integer.parseInt(request.queryParams("distanceAttack"));
+        //     Hero newHero = new Hero(name, age, power, weakness, defense, distanceAttack);
+
+        //     squad.addToSquad(newHero);
+
+        //     model.put("herosquads", squad);
+        //     model.put("template", "templates/squad-success.vtl");
+        //     return new ModelAndView(model, layout);
+        // }, new VelocityTemplateEngine());
     }
 }

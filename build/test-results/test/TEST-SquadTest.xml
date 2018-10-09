@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SquadTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-10-06T22:43:45" hostname="abdulfatah-Lenovo-ideapad-110-15ISK" time="0.001">
+<testsuite name="SquadTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2018-10-09T07:16:10" hostname="abdulfatah-Lenovo-ideapad-110-15ISK" time="0.002">
   <properties/>
-  <testcase name="squad_setMaximumSize_Object" classname="SquadTest" time="0.001"/>
+  <testcase name="squad_setMaximumSize_Object" classname="SquadTest" time="0.002"/>
   <testcase name="squad_addNewHeroToSquad_Object" classname="SquadTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

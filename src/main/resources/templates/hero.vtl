@@ -1,18 +1,1 @@
-<!--p><h3>Your hero's name is $myHero.getName()</h3></p>
-<p><h3>Your hero is $myHero.getAge() years old</h3></p>
-<p><h3>Your hero has the power to $myHero.getPower()</h3></p>
-<p><h3>Your hero's weakness is $myHero.getWeakness()</h3></p>
-<p><h3>Your hero has defense level of $myHero.getDefense()</h3></p>
-<p><h3>Your hero's distance attack level is $myHero.getDistanceAttack()</h3></p-->
-<h1>Hero list</h1>
-<ul>
-  #if ($hero)
-    #foreach ($hero in $heroo)
-      <li><a href="/hero/$hero.getAge()">$hero.getName()</a></li>
-  #end
-</ul>
-#else
-  <p>You have no hero</p>
-#end
-
-<a href="/hero/new">Add new hero</a>
+<h1>$hero.getName()</h1>

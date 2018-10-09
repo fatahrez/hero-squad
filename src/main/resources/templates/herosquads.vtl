@@ -1,0 +1,10 @@
+#if ($squad)
+<ul>
+ #foreach($hero in $squad.theSquad())
+  <li>$hero.getName()</li>
+  <li>$hero.getAge()</li>
+  #end
+</ul>
+#else
+<p>No hero in $squad</p>
+#end
