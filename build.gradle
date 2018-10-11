@@ -5,9 +5,9 @@
 apply plugin: 'java'
 apply plugin: 'application'
 
-archivesBaseName = "Hero-Squad"
+archivesBaseName = "hero-squad"
 mainClassName = 'App'
-applicationName="Hero-Squad"
+applicationName="hero-squad"
 group 'com.memesnet'
 version '1.0-SNAPSHOT'
 
