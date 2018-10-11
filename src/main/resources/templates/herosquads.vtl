@@ -1,10 +1,12 @@
-#if ($squad)
-<ul>
- #foreach($hero in $squad.theSquad())
-  <li>$hero.getName()</li>
-  <li>$hero.getAge()</li>
-  #end
-</ul>
-#else
-<p>No hero in $squad</p>
-#end
+<div class="container">
+  <h1>All Hero Squads</h1>
+  #if ($herosquads)
+    <ul>
+    #foreach ($herosquad in $herosquads)
+          <li><a href="/herosquads/$herosquad.getId()" class="btn btn-outline-dark">$herosquad.getName()</a></li>
+    #end
+  </ul>
+    #else
+    <a href="/herosquads/new" class="btn btn-outline-dark">Add new hero Squad</a>
+    #end
+</div>

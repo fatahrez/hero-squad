@@ -4,14 +4,14 @@ import static org.junit.Assert.*;
 public class SquadTest{
   @Test
     public void squad_addNewHeroToSquad_Object(){
-        Squad topOnes = new Squad();
+        Squad topOnes = new Squad("jdj","sja");
         Hero superman = new Hero("superman", 34, "punch", "himself", 9, 10);
         topOnes.addToSquad(superman);
-        assertTrue(topOnes.squadall.contains(superman));
+        assertTrue(topOnes.theSquad().contains(superman));
     }
   @Test(expected = IllegalArgumentException.class)
     public void squad_setMaximumSize_Object(){
-      Squad topOnes = new Squad();
+      Squad topOnes = new Squad("dsnsm", "hdshj");
 
       Hero superman = new Hero("superman", 34, "punch", "himself", 9, 10);
       Hero superwoman = new Hero("superwoamn", 31, "kick", "too slow", 7, 10);

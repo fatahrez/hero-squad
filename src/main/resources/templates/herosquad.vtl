@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>$herosquad.getName()</h1>
+  #if($herosquad)
+  <ul>
+  #foreach($hero in $herosquad.theSquad())
+    <li>$hero.getName()</li>
+  </ul>
+  #end 
+  #else
+  <p>no hero in squad</p>
+  #end
+<a href="/herosquads/$herosquad.getId()/heroes/new" class="btn btn-outline-dark">Add hero</a>
+<a href="/" class="btn btn-outline-dark">Return to home</a>
+</div>
