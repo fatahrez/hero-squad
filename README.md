@@ -49,23 +49,23 @@ The program is designed and developed using latest Technology, Hence making it S
 
 This software uses following open source packages.
 
-- [Java Runtime Environment :V9](#)
-- [Latest Browsers](#)
-- [Latest SDK](#)<br>
+- [Java Runtime Environment :V9](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
+- [Latest Browsers](chrome.com)
+- [Latest SDK](https://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)<br>
 * Clone or Deploy this program from my Github Repository, or Fork It<br>
 *Initialise It in your Local Machine<br>
 *Open it With Lastest IDE
 
 ## Deployment
 
-You can have this Program Deployed into you choice Deployement Service since this program is under MIT lincence.
+Deploy to heroku. [HerokuApp](herokuapp.com)
 
 ## Support
 Phone number: 0789268466
 
 ## License
 
-<a href="license">MIT License</a>
+<a href="LICENSE">MIT License</a>
 
 ---
 
